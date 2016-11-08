@@ -1,0 +1,37 @@
+list-item util-clearfix list-item-180 detail
+
+//div[@id="main-wrap"]/ul/li/div[@class="right-block util-clearfix"]/div/div[@class="detail"]/h3/a/text()
+
+//div[@id="main-wrap"]/ul/li/div[@class="right-block util-clearfix"]/div/div[@class="info infoprice"]/span/span[@class="value"]/text()
+
+
+        #hxs = HtmlXPathSelector(response)
+
+        #l = AliLoader(AliItem(), hxs)
+        #l.add_xpath('name', '//div[@id="main-wrap"]/ul/li/div[@class="right-block util-clearfix"]/div/div[@class="detail"]/h3/a/text()')
+        #l.add_xpath('cost', '//div[@id="main-wrap"]/ul/li/div[@class="right-block util-clearfix"]/div/div[@class="info infoprice"]/span/span[@class="value"]/text()')
+        #return l.load_item()
+
+        for sel in response.xpath('//div[@id="main-wrap"]/ul/li'):
+            name = sel.xpath('div[@class="right-block util-clearfix"]/div/div[@class="detail"]/h3/a/text()').extract()
+            cost = sel.xpath('div[@class="right-block util-clearfix"]/div/div[@class="info infoprice"]/span/span[@class="value"]/text()').extract()
+            print name, cost
+
+
+        hxs = HtmlXPathSelector(response)
+
+        l = AliLoader(AliItem(), hxs)
+        l.add_xpath('name', '//div[@id="main-wrap"]/ul/li/div[@class="right-block util-clearfix"]/div/div[@class="detail"]/h3/a/text()')
+        l.add_xpath('cost', '//div[@id="main-wrap"]/ul/li/div[@class="right-block util-clearfix"]/div/div[@class="info infoprice"]/span/span[@class="value"]/text()')
+        return l.load_item()
+
+
+
+       div[@class="site-item "]/div[@class="title-and-desc"]/div/text()
+
+
+       
+div[@class="detail"]/div[@class="detail-bd container util-clearfix detail-image-dynamic"]/div[@class="detail-main"]/div/div[@class="product-price"]/div/div[@class="p-price-detail util-clearfix"]/div/div[@class="p-price-content notranslate"]/span[@class="p-price"]
+
+//span[@class="p-price"]/text()
+<span id="j-sku-price" class="p-price"><span itemprop="lowPrice">149.99</span> - <span itemprop="highPrice">163.99</span></span>
