@@ -56,17 +56,17 @@ ROBOTSTXT_OBEY = False
 #    'ali.middlewares.MyCustomDownloaderMiddleware': 543,
 # }
 
-USER_AGENT_LIST = [
-    'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.36 Safari/535.7',
-    'Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0) Gecko/16.0 Firefox/16.0',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10'
-]
-DOWNLOADER_MIDDLEWARES = {
-   'ali.middlewares.RandomUserAgentMiddleware' : 90,
-   'ali.middlewares.ProxyMiddleware' : 100,
-   'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
+# USER_AGENT_LIST = [
+#     'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.36 Safari/535.7',
+#     'Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0) Gecko/16.0 Firefox/16.0',
+#     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10'
+# ]
+# DOWNLOADER_MIDDLEWARES = {
+#    'ali.middlewares.RandomUserAgentMiddleware' : 90,
+#    'ali.middlewares.ProxyMiddleware' : 100,
+#    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
    # 'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
-}
+# }
 
 # COOKIES_ENABLED = False
 # HTTPERROR_ALLOW_ALL = True
@@ -74,10 +74,10 @@ DOWNLOADER_MIDDLEWARES = {
 # DUPEFILTER_DEBUG = True
 
 # Need to be proxies from the USA to gather data in English
-PROXY_LIST = [
-    'http://217.28.74.31:8080',
-    'http://96.126.110.96:3128'
-]
+#PROXY_LIST = [
+#    'http://217.28.74.31:8080',
+#    'http://96.126.110.96:3128'
+#]
 
 
 # Enable or disable extensions
