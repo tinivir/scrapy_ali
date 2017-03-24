@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+try:
+	from settings_local import *
+except:
+	pass
+
 # Scrapy settings for ali project
 #
 # For simplicity, this file contains only settings considered important or
@@ -72,7 +77,6 @@ REDIRECT_ENABLED = False
 
 DOWNLOADER_MIDDLEWARES = {'scrapy_crawlera.CrawleraMiddleware': 600}
 CRAWLERA_ENABLED = True
-CRAWLERA_APIKEY = 'apikey'
 
 # COOKIES_ENABLED = False
 # HTTPERROR_ALLOW_ALL = True
